@@ -1,12 +1,12 @@
 import React from 'react'
 
 function TodoItems(props) {
-    const {item} = props
-    console.log(item)
+    const {todoItem} = props
+    console.log(todoItem)
 
     return (
         <div>
-            <h4>{item.item}</h4>
+            <h4>{todoItem.item}</h4>
         </div>
     )
 }

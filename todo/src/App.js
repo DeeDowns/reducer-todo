@@ -6,7 +6,7 @@ import TodoForm from './components/TodoForm'
 
 
 function App() {
-  const [inputText, setInputText] = useState()
+  const [inputText, setInputText] = useState('')
   const [state, dispatch] = useReducer(reducer, initialState)
   console.log(state)
 
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
         <h1>Todo App</h1>
         <TodoForm />
-        <TodoList todoData={state}/>
+        <TodoList todoItems={state}/>
     </div>
   );
 }

@@ -12,7 +12,7 @@ function TodoForm() {
                 >
                 </input>
             </label>
-            <button>Add to list</button>
+            <button>Add task</button>
         </form>
     )
 }

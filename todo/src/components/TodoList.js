@@ -1,16 +1,19 @@
 import React from 'react'
-import Todo from './TodoItems'
+import TodoItems from './TodoItems'
 
 function TodoList(props) {
-    const {todoData} = props
-    console.log(todoData.item)
+    const todoItems = props.todoItems
+    console.log(todoItems)
+   
 
     return (
         <div>
             <h3>click to mark complete</h3>
-            {
-            todoData.map(item => <Todo item={item} key={item.id} />)   
-            }
+           {todoItems.map(todoItem => {
+               return (
+                   <TodoItems todoItem={todoItem} key={todoItem.id} />
+               )
+            })}
             <button>click to clear</button>
         </div>
     )
