@@ -2,7 +2,7 @@ import React from 'react'
 
 function TodoForm(props) {
     const { inputText, handleChanges, handleSubmit } = props
-    console.log(props)
+    // console.log(props)
 
 
 
