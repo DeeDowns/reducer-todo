@@ -21,10 +21,6 @@ function App() {
     dispatch ({ type: 'ADD_TODO', payload: inputText})
     setInputText('')
   }
-  // const addTask = event => {
-  //   event.preventDefault()
-  //   dispatch({type : 'ADD_TODO', payload: inputText})
- // }
 
   return (
     <div className="App">

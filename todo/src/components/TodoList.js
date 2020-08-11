@@ -9,7 +9,7 @@ function TodoList(props) {
     return (
         <div>
             <h3>click to mark complete</h3>
-           {todoItems.map(todoItem => {
+           {todoItems.todos.map(todoItem => {
                return (
                    <TodoItems todoItem={todoItem} key={todoItem.id} />
                )
