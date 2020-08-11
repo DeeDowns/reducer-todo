@@ -16,7 +16,7 @@ function TodoList(props) {
                    <TodoItems todoItem={todoItem} key={todoItem.id} toggleItem={toggleItem} />
                )
             })}
-            <button onClick={() => clearCompleted()}>click to clear</button>
+            <button onClick={() => clearCompleted()}>click to clear completed</button>
         </div>
     )
 }
