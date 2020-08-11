@@ -23,23 +23,8 @@ function App() {
   }
 
   const toggleItem = id => {
-    // console.log('test',id)
-    return dispatch({ type: 'TOGGLE_COMPLETED', payload: id})
-    
-    // state.todos.map(task => {
-    //   if(task.id === id){
-    //     console.log(true)
-    //     return dispatch({ type: 'TOGGLE_COMPLETED', payload: task.completed})
-        
-    //   } else { 
-    //     console.log(false)
-    //     return task
-    //   }
-    // })
-    
+    return dispatch({ type: 'TOGGLE_COMPLETED', payload: id}) 
   }
-
-  // toggleItem(38929873589)
 
   return (
     <div className="App">
