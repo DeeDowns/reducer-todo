@@ -2,9 +2,10 @@ import React from 'react'
 import TodoItems from './TodoItems'
 
 function TodoList(props) {
-    const { todoItems, toggleItem } = props
+    const { todoItems, toggleItem, clearCompleted } = props
     // console.log(todoItems)
     // console.log(toggleItem)
+    console.log(clearCompleted)
    
 
     return (
@@ -15,7 +16,7 @@ function TodoList(props) {
                    <TodoItems todoItem={todoItem} key={todoItem.id} toggleItem={toggleItem} />
                )
             })}
-            <button>click to clear</button>
+            <button onClick={() => clearCompleted()}>click to clear</button>
         </div>
     )
 }

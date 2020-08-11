@@ -8,9 +8,6 @@ import TodoForm from './components/TodoForm'
 function App() {
   const [inputText, setInputText] = useState('')
   const [state, dispatch] = useReducer(reducer, initialState)
-  console.log('state.todos',state.todos)
-  // console.log(inputText)
-  // console.log(dispatch)
 
   const handleChanges = event => {
     setInputText(event.target.value)
@@ -26,11 +23,17 @@ function App() {
     return dispatch({ type: 'TOGGLE_COMPLETED', payload: id}) 
   }
 
+  const clearCompleted = () => {
+    console.log('hi')
+    return dispatch({type: 'CLEAR_COMPLETED'})
+
+  } 
+
   return (
     <div className="App">
         <h1>Todo App</h1>
         <TodoForm inputText={inputText} handleChanges={handleChanges} handleSubmit={handleSubmit}/>
-        <TodoList todoItems={state} toggleItem={toggleItem}/>
+        <TodoList todoItems={state} toggleItem={toggleItem} clearCompleted={clearCompleted}/>
     </div>
   );
 }

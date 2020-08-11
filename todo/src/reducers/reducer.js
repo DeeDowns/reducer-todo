@@ -24,6 +24,9 @@ export const reducer = (state, action) => {
                 }
             })
         }
+        case 'CLEAR_COMPLETED':
+            return {todos: state.todos.filter(item => !item.completed)}
+
         default: 
         return state
     }
