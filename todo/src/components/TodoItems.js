@@ -2,7 +2,7 @@ import React from 'react'
 
 function TodoItems(props) {
     const {todoItem} = props
-    console.log(todoItem)
+    // console.log(todoItem)
 
     return (
         <div>

@@ -1,6 +1,9 @@
 import React from 'react'
 
-function TodoForm() {
+function TodoForm(props) {
+    const { inputText, handleChanges, handleSubmit } = props
+    console.log(props)
+
 
 
     return (
@@ -9,10 +12,12 @@ function TodoForm() {
                 <input
                     type='text'
                     name='inputText'
+                    value={inputText}
+                    onChange={handleChanges}
                 >
                 </input>
             </label>
-            <button>Add task</button>
+            <button onClick={handleSubmit}> Add task</button>
         </form>
     )
 }
