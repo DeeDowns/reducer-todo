@@ -1,4 +1,5 @@
 import React from 'react'
+import './TodoItems.css'
 
 function TodoItems(props) {
     const {todoItem, toggleItem} = props
@@ -6,7 +7,8 @@ function TodoItems(props) {
     // console.log(toggleItem)
 
     return (
-        <div onClick={() => toggleItem(todoItem.id)}> 
+        <div onClick={() => toggleItem(todoItem.id)}
+        className={todoItem.completed ? 'completed' : ''}> 
             <h4>{todoItem.item}</h4>
         </div>
     )
